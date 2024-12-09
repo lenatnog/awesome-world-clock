@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: #272142;
+  color: #152e34;
   font-family: "Inter", sans-serif;
 }
 
@@ -25,6 +25,9 @@ select {
   font-size: 18px;
   border-radius: 4px;
   padding: 10px;
+}
+a {
+  color: #272142;
 }
 
 .container {
@@ -69,5 +72,5 @@ footer {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.7);
 }

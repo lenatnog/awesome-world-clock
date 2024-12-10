@@ -1,13 +1,13 @@
 function updateTime() {
   // Los Angeles
-  let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
+  let saoPauloElement = document.querySelector("#sao-paulo");
+  if (saoPauloElement) {
+    let saoPauloDateElement = saoPauloElement.querySelector(".date");
+    let saoPauloTimeElement = saoPauloElement.querySelector(".time");
+    let saoPauloTime = moment().tz("America/Sao_Paulo");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
-    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+    saoPauloDateElement.innerHTML = saoPauloTime.format("MMMM	Do YYYY");
+    saoPauloTimeElement.innerHTML = saoPauloTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
@@ -27,12 +27,12 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  let cityTimezone = event.target.value;
-  if (cityTimezone === "current") {
-    cityTimezone = moment.tz.guess();
+  let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
   }
-  let cityName = cityTimezone.replace("_", " ").split("/")[1];
-  let cityTime = moment().tz(cityTimezone);
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
   <div class="city">
